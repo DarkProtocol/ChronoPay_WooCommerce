@@ -317,6 +317,6 @@ function ChronoPay() {
     	    exit;
         }
 
-	}
+    }
         
 }
