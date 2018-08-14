@@ -15,19 +15,19 @@ function ChronoPay() {
 	// if not exists main class
     if (!class_exists('WC_Payment_Gateway')) {
         return;
-	} 
+    } 
 	
 
-	function wc_add_chronopay_payment($methods) {	
+    function wc_add_chronopay_payment($methods) {	
         $methods[] = 'WC_ChronoPay'; 
         return $methods;
-	}
+    }
 
-	// register chronopay payment
-	add_filter('woocommerce_payment_gateways', 'wc_add_chronopay_payment');
+    // register chronopay payment
+    add_filter('woocommerce_payment_gateways', 'wc_add_chronopay_payment');
 
-	class WC_ChronoPay extends WC_Payment_Gateway 
-	{
+    class WC_ChronoPay extends WC_Payment_Gateway 
+    {
         
 
         /**
