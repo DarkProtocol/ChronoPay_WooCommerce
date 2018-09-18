@@ -466,7 +466,7 @@ function ChronoPay() {
 
             // add cb_url
             if (strlen($this->getCbUrl()) > 0) {
-                $url .= '&cb_url=' . $this->getCbUrl();
+                $url .= '&cb_url=' . urlencode($this->getCbUrl());
             } 
 
             // add cb_type
