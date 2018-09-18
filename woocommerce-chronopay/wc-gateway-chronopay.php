@@ -461,7 +461,7 @@ function ChronoPay() {
 
             // add decline url
             if (strlen($this->getDeclineUrl()) > 0) {
-                $url .= '&decline_url=' . $this->getDeclineUrl();
+                $url .= '&decline_url=' . urlencode($this->getDeclineUrl());
             }
 
             // add cb_url
@@ -560,6 +560,7 @@ function ChronoPay() {
          *
          * @param float $orderPrice
          * @param string $orderId
+         * @param int | null $additionalParam
          *
          * @return string
          */
